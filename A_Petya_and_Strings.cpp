@@ -10,6 +10,37 @@ using namespace std;
 int main()
 {
     FAST;
-    
+    string s1, s2;
+    cin >> s1 >> s2;
+    for (int i = 0; i < s1.size(); i++)
+    {
+        s1[i] = toupper(s1[i]);
+    }
+
+    for (int i = 0; i < s2.size(); i++)
+    {
+        s2[i] = toupper(s2[i]);
+    }
+
+    int result = 0;
+    for (int i = 0; i < s1.size(); i++)
+    {
+        if (s1[i] > s2[i])
+        {
+            result = 1;
+            cout << 1 << nl;
+            break;
+        }
+        else if (s1[i] < s2[i])
+        {
+            result = -1;
+            cout << -1 << nl;
+            break;
+        }
+    }
+    if (result == 0)
+    {
+        cout << 0 << nl;
+    }
     return 0;
 }
